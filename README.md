@@ -1,1 +1,1 @@
-# polandPricingB2C
+# Data Challenge Actuariat
