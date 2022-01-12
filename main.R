@@ -7,7 +7,7 @@
 #    AUTRES MEMBRES : TOSSOU RODRIGUE, FOUZIA ELAOUNI, YOUSSOUF BANCE            #
 # ********************************************************************************#
 
-Packages_lib = "C:/Packages"
+#Packages_lib = "C:/Packages"
 
 .libPaths(Packages_lib)
 ########################
@@ -117,7 +117,7 @@ Chart_hosp_FRA <-
   ) %>%
   hc_chart(style = list(fontFamily = "Rubik")) %>%
   hc_title(
-    text = "Hospitalisation et r√©animations", 
+    text = "Hospitalisation et rÈanimations", 
     style = list(
       color = "#000000", 
       fontWeight = "bold",
@@ -126,7 +126,7 @@ Chart_hosp_FRA <-
     align = "left"
   ) %>%
   hc_subtitle(
-    text = "Mars 2020 ? Decembre 2021", 
+    text = "Mars 2020 ‡ Decembre 2021", 
     style = list(
       color = "#000000", 
       fontStyle = "italic",
@@ -347,7 +347,7 @@ chart_map_hosp <- highchart(type = 'map') %>%
            align = "left"
   ) %>%
   hc_subtitle(
-    text = "Depuis Mars 2020 <br> La Guyane pr?sente le plus fort taux d'hospitalisation", 
+    text = "Depuis Mars 2020 <br> La Guyane prÈsente le plus fort taux d'hospitalisation", 
     style = list(
       color = "#000000", 
       fontStyle = "italic",
@@ -497,7 +497,7 @@ map_rea <- highchart(type = 'map') %>%
       ),
       footerFormat = "</p>"
     )) %>%
-  hc_title(text = "Nombre de cas de r√©animations pour 100000 habitants", 
+  hc_title(text = "Nombre de cas de rÈanimations pour 100000 habitants", 
            style = list(
              fontWeight = "bold",
              fontSize = "28px"
@@ -505,7 +505,7 @@ map_rea <- highchart(type = 'map') %>%
            align = "left"
   ) %>%
   hc_subtitle(
-    text = "Depuis Mars 2020 <br> Paris pr?sente le plus fort taux de r?animations devant la Guyane (Max taux d'hospitalisation)",
+    text = "Depuis Mars 2020 <br> Paris prÈsente le plus fort taux de r?animations devant la Guyane (Max taux d'hospitalisation)",
     style = list(
       color = "#000000", 
       fontStyle = "italic",
@@ -576,7 +576,7 @@ Chart_rdv =
     data,
     "bar",
     hcaes(x = dep_name, y = n_tot_complet), 
-    name = "Nombre de Vaccin√©s (couverture vaccinale)", 
+    name = "Nombre de VaccinÈs (couverture vaccinale)", 
     showInLegend = TRUE,
     color = mygreen,
     pointPadding = 0.4,
@@ -596,7 +596,7 @@ Chart_rdv =
     )
   ) %>%
   hc_title(
-    text = "Rendez-vous de vaccination pris et nombre de vaccin√©s", 
+    text = "Rendez-vous de vaccination pris et nombre de vaccinÈs", 
     style = list(
       fontWeight = "bold",
       fontSize = "28px"
@@ -604,7 +604,7 @@ Chart_rdv =
     align = "left"
   ) %>%
   hc_subtitle(
-    text = "Une couverture vaccinale accrue gr√¢ce √† des vaccinations sans rendez-vous", 
+    text = "Une couverture vaccinale accrue gr‚ce ‡ des vaccinations sans rendez-vous", 
     style = list(
       fontStyle = "italic",
       fontSize = "18px"
@@ -692,7 +692,7 @@ chart_map_centres_vaccinaux <- highchart(type = 'map') %>%
       headerFormat = "<p>",
       pointFormat = paste0("<b>{point.stlabel}</b><br>",
                            "<b style=\"color:#1874CD\">Centre vaccinal (pour 100000):</b> {point.nbr_etbl_pour_100mill_hab:.0f}<br>",
-                           "<b style=\"color:red\">R?animations (pour 100000):</b> {point.rea_rel:.0f}<br>"
+                           "<b style=\"color:red\">RÈanimations (pour 100000):</b> {point.rea_rel:.0f}<br>"
       ),
       footerFormat = "</p>"
     )) %>%
@@ -704,7 +704,7 @@ chart_map_centres_vaccinaux <- highchart(type = 'map') %>%
            align = "left"
   ) %>%
   hc_subtitle(
-    text = "Paris n'a que 3 centres vaccinaux pour 100000 alors qu'il a le plus fort taux de r?animations", 
+    text = "Paris n'a que 3 centres vaccinaux pour 100000 alors qu'il a le plus fort taux de rÈanimations", 
     style = list(
       color = "#000000", 
       fontStyle = "italic",
@@ -813,7 +813,7 @@ Chart_couv_FRA =
   ) %>%
   hc_chart(style = list(fontFamily = "Rubik")) %>%
   hc_title(
-    text = "Couverture vaccinale et taux de r√©animations", 
+    text = "Couverture vaccinale et taux de rÈanimations", 
     style = list(
       color = "#000000", 
       fontWeight = "bold",
@@ -822,7 +822,7 @@ Chart_couv_FRA =
     align = "left"
   ) %>%
   hc_subtitle(
-    text = "D√©cembre 2020 √† D√©cembre 2021", 
+    text = "DÈcembre 2020 ‡ DÈcembre 2021", 
     style = list(
       color = "#000000", 
       fontStyle = "italic",
@@ -849,7 +849,7 @@ Chart_couv_FRA =
         to = 80, 
         color = mygreenlight,
         label = list(
-          text = "Transmission du virus stopp√©e - 70% √† 80%",
+          text = "Transmission du virus stoppÈe - 70% ‡ 80%",
           style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
         )
       ),
@@ -858,7 +858,7 @@ Chart_couv_FRA =
         to = 100, 
         color = "#d3f0f0",
         label = list(
-          text = "Retour √† la vie normale - 80% √† 100%",
+          text = "Retour ‡ la vie normale - 80% ‡ 100%",
           style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
         )
       )
@@ -921,7 +921,7 @@ chart_bar_racing_hosp <- df %>%
   e_timeline_opts(autoPlay = TRUE, top = "55")  %>%
   e_grid(top = 100) %>%
   e_title(paste0("Hospitalisation pour 100000 habitants par mois"), 
-          subtext = "10 d√©partements les plus atteints", 
+          subtext = "10 dÈpartements les plus atteints", 
           left = "center", top = 10)
 
 
@@ -962,7 +962,7 @@ chart_bar_racing_rea <-  df %>%
   e_timeline_opts(autoPlay = TRUE, top = "55")  %>%
   e_grid(top = 100) %>%
   e_title(paste0("Reanimations pour 100000 habitants par mois"), 
-          subtext = "10 d√©partements les plus atteints", 
+          subtext = "10 dÈpartements les plus atteints", 
           left = "center", top = 10)
 
 #### Couverture vaccinale liquide
@@ -1035,14 +1035,14 @@ tranch_age <- highchart() %>%
     categories = unique(bagdata$mois_annee)
   )%>%
   hc_yAxis(title= list(text="Nombre mensuel de cas pour 100 000 hbts"))%>%
-  hc_title(text="Taux de r√©animation par tranche d'√¢ge",style = list(
+  hc_title(text="Taux de rÈanimation par tranche d'‚ge",style = list(
     color = "#000000",
     fontWeight = "bold",
     fontSize = "28px"
   ),
   align = "left") %>%
   hc_subtitle(
-    text = "Les r√©animations chez les moins de 19 ans sont tr√®s faibles et constant sur la p√©riode observ√©e.",
+    text = "Les rÈanimations chez les moins de 19 ans sont trËs faibles et constant sur la pÈriode observÈe.",
     style = list(
       color = "#000000",
       fontStyle = "italic",
@@ -1160,7 +1160,7 @@ Chart =
   ) %>%
   hc_chart(style = list(fontFamily = "Rubik")) %>%
   hc_title(
-    text = "Taux de r√©animations dans les 5 r√©gions les plus atteintes", 
+    text = "Taux de rÈanimations dans les 5 rÈgions les plus atteintes", 
     style = list(
       fontWeight = "bold",
       fontSize = "28px"
@@ -1178,7 +1178,7 @@ Chart =
   hc_yAxis(
     gridLineWidth = 0, 
     labels = list(style = list(color =  "#000000")),
-    title = list(text = "Nombre de r√©animations", style = list(color = "#000000")),
+    title = list(text = "Nombre de rÈanimations", style = list(color = "#000000")),
     showFirstLabel = FALSE
   ) %>%
   hc_xAxis(
@@ -1198,6 +1198,172 @@ Chart =
   )
 
 Chart
+
+
+### Traitement des donn√©es
+DEP_tamp <- base_eco_dep %>%
+  left_join(dep %>% select(code, region_code, dep_name, reg_name),
+            by = c('dep' = 'code'),
+            keep = FALSE
+  ) %>%
+  filter(!is.na(dep) & !is.na(reg))
+
+first_5 <- DEP_tamp %>%
+  slice_max(aide_covid_moy, n = 5) %>%
+  mutate(flag = 1)
+
+
+last_5 <- DEP_tamp %>%
+  slice_min(aide_covid_moy, n = 5) %>%
+  mutate(flag = 2)
+
+DEP_tamp2 <- DEP_mois_hosp %>%
+  left_join(donnee_population %>% select(code_insee, pop),
+            by = c('dep' = 'code_insee'),
+            keep = FALSE
+  ) 
+
+data <- DEP_tamp2 %>%
+  left_join(bind_rows(first_5, last_5) %>% select(dep, nb_benef_covid, montant_benef_covid, flag), keep = F) %>%
+  filter(!is.na(flag)) %>%
+  group_by(flag, mois_annee) %>%
+  summarise(mois = first(mois),
+            annee = first(annee),
+            hosp = sum(incid_hosp, na.rm = T),
+            rea = sum(incid_rea, na.rm = T),
+            pop = sum(pop, na.rm = T)) %>%
+  ungroup %>%
+  mutate(hosp_rel = (hosp/pop)*100000 ,
+         rea_rel = (rea/pop)*100000,
+         hc_ttip = 
+           glue(
+             "
+            <b> {mois} {annee} </b> <br>
+            Hospitalisations : {round(hosp_rel)} <br>
+            Reanimations : {round(rea_rel)} <br>
+        "
+           ))
+
+
+mygold = "#FDB927"
+myblue = "#a7bcdc"
+mypurple = "#552583"
+myred = "#FF5733"
+myredlight = "#f0d5d1"
+mygreen = "#03989E"
+mygreenlight = "#e9f1f1"
+
+seuil1 = "70"
+seuil2 = "80"
+seuil3 = "90"
+
+
+Chart_taux_ineg = 
+  data %>%
+  hchart(
+    "areaspline", 
+    hcaes(x = mois_annee, y = hosp_rel, group = flag), 
+    name = c("Groupe 1 : CÙtes-d'armor, Ille-et-Vilaine, Maine-et-Loire, Mayenne, VendÈe","Groupe 2 : Aude, Guadeloupe, Gard, Haute-Corse, Seine-Saint-Denis"), 
+    showInLegend = TRUE, 
+    fillOpacity = 0.3,
+    color = c(mygold,myblue),
+    borderColor = "transparent"
+  ) %>%
+  hc_chart(style = list(fontFamily = "Rubik")) %>%
+  hc_title(
+    text = "Taux d'hospitalisation et de rÈanimations suivant les aides exceptionnelles COVID", 
+    style = list(
+      color = "#000000", 
+      fontWeight = "bold",
+      fontSize = "28px"
+    ), 
+    align = "left"
+  ) %>%
+  hc_subtitle(
+    text = "5 premiers dÈpartements vs 5 derniers dÈpartements ", 
+    style = list(
+      color = "#000000", 
+      fontStyle = "italic",
+      fontSize = "18px"
+    ), 
+    align = "left"
+  ) %>%
+  hc_legend(formatter = JS("function(){return(this.point.flag)}")) %>%
+  hc_yAxis(
+    gridLineWidth = 0, 
+    labels = list(style = list(color =  "#000000")),
+    title = list(text = "Taux pour 100000", style = list(color = "#000000"))
+  ) %>%
+  hc_xAxis(
+    labels = list(style = list(color =  "#000000")),
+    title = list(text= ""),
+    lineWidth = 0,
+    tickWidth = 0,
+    # Vagues contamination
+    plotBands = list(
+      list(
+        from = -1,
+        to = 3, 
+        color = "#e9f1f1",
+        label = list(
+          text = "1ere vague",
+          style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
+        )
+      ),
+      list(
+        from = 6,
+        to = 9, 
+        color = "#e9f1f1",
+        label = list(
+          text = "2e vague",
+          style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
+        )
+      ),
+      list(
+        from = 11,
+        to = 14, 
+        color = "#e9f1f1",
+        label = list(
+          text = "3e vague",
+          style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
+        )
+      ),
+      list(
+        from = 16,
+        to = 18, 
+        color = "#e9f1f1",
+        label = list(
+          text = "4e vague",
+          style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
+        )
+      ),
+      list(
+        from = 19,
+        to = 22, 
+        color = "#e9f1f1",
+        label = list(
+          text = "5e vague",
+          style = list(fontWeight = "bold", color = "#000000", fontSize = "14px")
+        )
+      )
+    )
+  ) %>%
+  hc_tooltip(
+    shared = TRUE,
+    formatter = JS(
+      "
+      function(){return(this.point.hc_ttip)}
+      "
+    ),
+    shape = "square",
+    borderWidth = 0
+  ) 
+
+Chart_taux_ineg
+
+
+
+
 
 #### Generation du report (HTML)
 rmarkdown::render(

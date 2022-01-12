@@ -1,0 +1,231 @@
+---
+title: "Covid-19 et Inégalités de santé :"
+author: "Où en est-on ?"
+output:
+  rmdformats::material:
+  #  code_folding: hide
+    self_contained: true
+    thumbnails: false
+    lightbox: false
+---
+
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+<img class="logo" src="0_data/logo.png" alt="Compass" />
+ 
+<style type="text/css">
+
+h1.title {
+  font-size: 30px;
+  color: #0459FA;
+  text-align: left;
+   font-weight: bold;
+}
+
+
+img.logo{
+margin-left: 1cm;
+margin-top: 0.1cm;
+height: 55px;
+display: inline;
+position:absolute;
+top:-50px;
+right:1px;
+}
+
+
+h4.author { 
+  font-size: 18px;
+  color: #0459FA;
+  text-align: left;
+}
+
+h1 { font-family: Open Sans; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+color: #8d8e8e;} 
+
+h3 { font-family: Open Sans; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Open Sans; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Open Sans; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Open Sans; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5667px; }
+
+
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.pages .nav-tabs>li {
+    margin-bottom: 0px !important;
+}
+
+.pages .nav-tabs>li>a {
+    font-weight: 400 !important;
+}
+
+.pages ul.nav {
+    margin-top: 2em;
+    margin-bottom: 1em;
+     background-color: #d6eaf2 ;
+}
+
+.pages .nav-tabs>li.active>a {
+    background-color: #a7bcdc !important;
+}
+.menu ul li.active {
+    background-color: #d6eaf2;
+    position: relative;
+}
+
+.menu ul li a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans";
+  color: #000000;
+}
+
+.header-panel {
+  background-color: #D6EAF2;
+}
+
+.pages h1 {
+  color: #20201f;
+}
+
+.pages h2 {
+  color: #a7bcdc;
+}
+
+div.main-container {
+  max-width: 1600px !important;
+}
+
+.header-panel {
+    min-height: 100px;
+}
+
+.header-panel #header {
+    min-height: 100px;
+}
+
+</style>
+
+```{r knitr_init, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE, results="asis"}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print = "75")
+opts_chunk$set(echo    = TRUE,
+               cache   = FALSE,
+               prompt  = FALSE,
+               tidy    = FALSE,
+               comment = NA,
+               message = FALSE,
+               warning = FALSE)
+options(Encoding = 'UTF-8')
+opts_knit$set(width = 75)
+```
+
+
+# Mise en contexte {.tabset .tabset-fade}
+```{r echo=FALSE, warning=FALSE}
+Chart_hosp_FRA %>% 
+  hc_exporting(enabled = TRUE,
+               chartOptions = list(
+                 chart = list(
+                   backgroundColor = '#9E9E9E'
+                 )
+               ))
+```
+
+
+
+```{r echo=FALSE}
+Chart
+```
+
+
+# Inegalités territoriales et sociales du Covid-19 {.tabset .tabset-fade}
+
+## **<font color="blue">Hospitalisations</font>** {.tabset .tabset-fade}
+
+
+### **<font color="blue">Historique des hospitalisations</font>**
+```{r echo=FALSE}
+chart_bar_racing_hosp
+```
+
+### **<font color="blue">Hospitalisations par tranche d'age</font>**
+
+```{r echo=FALSE}
+tranch_age  %>% 
+  hc_exporting(enabled = TRUE,
+               backgroundColor = 'rgba(0,0,0,0)')
+```
+
+### **<font color="blue">map hospitalisation</font>**
+
+```{r echo=FALSE}
+chart_map_hosp
+```
+
+## **<font color="blue">Reanimation</font>**  {.tabset .tabset-fade}
+
+### **<font color="blue">Historique reanimation</font>**
+
+```{r echo=FALSE}
+chart_bar_racing_rea
+```
+
+### **<font color="blue">Map reanimation</font>**
+
+```{r echo=FALSE}
+map_rea
+```
+
+# Outils de gestion de la crise et inégalités territoriales {.tabset .tabset-fade}
+
+
+## **<font color="blue">Politique Vaccinale</font>** {.tabset .tabset-fade}
+
+### **<font color="blue">Prise de rendez-vous</font>**
+
+```{r echo=FALSE}
+Chart_rdv
+```
+
+
+### **<font color="blue">Couverture vaccinale</font>**  {.tabset .tabset-fade}
+
+#### **<font color="blue">Taux de couverture vaccinale </font>**
+
+```{r echo=FALSE}
+likid
+```
+
+
+#### **<font color="blue">Couverture france</font>**
+
+```{r echo=FALSE}
+Chart_couv_FRA
+```
+
+
+### **<font color="blue">Centre vaccinaux</font>**
+
+```{r echo=FALSE}
+chart_map_centres_vaccinaux
+```
+
+## **<font color="blue">Aide exceptionnelle COVID</font>** {.tabset .tabset-fade}
+
+
+```{r echo=FALSE}
+Chart_taux_ineg
+```
+
+
